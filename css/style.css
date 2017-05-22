@@ -1,17 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Raleway');
 body,
 div,
 ul,
 li,
-p,
+p {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
+h6, a {
+  font-family: 'Bitter', serif;
 }
 
 .clear-fix {
@@ -40,7 +44,6 @@ h2 {
 }
 
 h3 {
-  font-style: italic;
   font-size: 20px;
   color: #000;
   line-height: 22px;
@@ -113,7 +116,6 @@ a {
 }
 
 .white-text {
-  font-weight: bold;
   color: #fff;
 }
 
@@ -129,7 +131,9 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+");
+  border-bottom: 1px solid black;
+  outline: 2px solid #eee;
 }
 
 .flex-box {
@@ -218,4 +222,20 @@ span {
   .biopic {
     display: block;
   }
+}
+.project-entry img {
+  max-height: 240px;
+}
+#workExperience, #education {
+  border: 1px solid white;
+  border-width: 1px 0;
+  box-shadow:
+    0 10px 10px -10px rgba(0,0,0,0.1),
+    0 -10px 10px -10px rgba(0,0,0,0.1);
+  background: #fff;
+  background: -moz-radial-gradient(center, ellipse cover,  #fff 0%, #e5e5e5 100%);
+  background: -webkit-radial-gradient(center, ellipse cover,  #fff 0%,#e5e5e5 100%);
+  background: radial-gradient(ellipse at center,  #fff 0%,#e5e5e5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#e5e5e5',GradientType=1 );
+
 }
