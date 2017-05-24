@@ -44,6 +44,7 @@ bio = {
             HTMLskills.replace('%data%', skill)
           );
         });
+        bio.displayContacts('#footerContacts');
       }
 };
 
@@ -64,11 +65,39 @@ education = {
             majors: ['CS', 'Informatics'],
             dates: '2001 - 2003',
             url: 'http://mif.vu.lt/lt3/'
+          },
+          {
+             name: 'Vilnius University',
+             location: 'Palanga, Lithuania',
+             degree: 'Masters',
+             majors: ['CS', 'Informatics'],
+             dates: '2001 - 2003',
+             url: 'http://mif.vu.lt/lt3/'
+           },
+           {
+              name: 'Vilnius University',
+              location: 'Skuodas, Lithuania',
+              degree: 'Masters',
+              majors: ['CS', 'Informatics'],
+              dates: '2001 - 2003',
+              url: 'http://mif.vu.lt/lt3/'
           }
       ],
       onlineCourses: [
         {
           title: 'Front-End Web Developer Nanodegree',
+          school: 'Udacity',
+          dates: '2017',
+          url: 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
+        },
+        {
+          title: 'Front-End',
+          school: 'Udacity',
+          dates: '2017',
+          url: 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
+        },
+        {
+          title: 'Web Developer Nanodegree',
           school: 'Udacity',
           dates: '2017',
           url: 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
@@ -85,6 +114,16 @@ education = {
             HTMLschoolMajor.replace('%data%', school.majors),
             HTMLschoolURL.replace(/%data%/g, school.url)
           );
+        });
+        $('#education').append(HTMLonlineClasses);
+        education.onlineCourses.forEach(function(course) {
+          $('#education').append(HTMLschoolStart);
+          $('.education-entry:last').append(
+          HTMLonlineTitle.replace('%data%', course.title) + ' ' +
+          HTMLonlineSchool.replace('%data%', course.school),
+          HTMLonlineDates.replace('%data%', course.dates),
+          HTMLonlineURL.replace('%data%', course.url)
+        );
         });
       }
 };
@@ -157,4 +196,3 @@ work.display();
 projects.display();
 education.display();
 $('#mapDiv').append(googleMap);
-bio.displayContacts('#footerContacts');

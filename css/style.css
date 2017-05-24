@@ -14,7 +14,8 @@ h2,
 h3,
 h4,
 h5,
-h6, a {
+h6,
+a {
   font-family: 'Bitter', serif;
 }
 
@@ -25,9 +26,11 @@ h6, a {
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+  padding: 1% 0;
+  margin: 0 5%;
+  border-top: 1px solid #f3f3f3;
+  box-shadow: 0 -3px 0 -2px rgba(0,0,0,0.1);
 }
-
 h1 {
   font-size: 40px;
   color: #f5a623;
